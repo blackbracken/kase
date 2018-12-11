@@ -3,8 +3,6 @@
 [![](https://api.travis-ci.org/blackbracken/Kase.svg?branch=master)](https://travis-ci.org/blackbracken/Kase)
 [![](https://jitpack.io/v/blackbracken/Kase.svg)](https://jitpack.io/#blackbracken/Kase)
 
-<div style="text-align: center;"> **A tiny DataHolder library** </div>
-
 ## 概要
 ミニマルなDataHolderのライブラリです.
 
