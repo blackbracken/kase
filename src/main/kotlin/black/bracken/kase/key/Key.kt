@@ -7,8 +7,8 @@ import black.bracken.kase.SourceContainer
  *
  * @author BlackBracken
  */
-interface Key<C : SourceContainer<S>, S : Any, V : Any> {
+interface Key<in C : SourceContainer<S>, S : Any, out V : Any> {
 
-    fun extract(container: C): Result<V>
+    fun extract(container: C): V
 
 }
