@@ -2,6 +2,7 @@ package black.bracken.kase
 
 import black.bracken.kase.container.SourceContainer
 import black.bracken.kase.key.Key
+import black.bracken.kase.key.WritableKey
 
 /**
  * A manipulator of [SourceContainer].
@@ -22,7 +23,7 @@ interface Kase<C : SourceContainer<S>, S : Any> {
      *
      * @throws IllegalStateException if the given [value] could not be set.
      */
-    operator fun <V : Any> set(key: Key<C, S, V>, value: V)
+    operator fun <V : Any> set(key: WritableKey<C, S, V>, value: V)
 
     /**
      * Returns a value corresponds the given [key] if it exists otherwise null.
@@ -46,6 +47,7 @@ interface Kase<C : SourceContainer<S>, S : Any> {
     /**
      * Returns a value corresponds the given [key] if it exists otherwise a result of [default] invoked and sets it in [S].
      */
-    fun <V : Any> getOrPut(key: Key<C, S, V>, default: () -> V): V = getOrNull(key) ?: default().also { this[key] = it }
+    fun <V : Any> getOrPut(key: WritableKey<C, S, V>, default: () -> V): V =
+        getOrNull(key) ?: default().also { this[key] = it }
 
 }
