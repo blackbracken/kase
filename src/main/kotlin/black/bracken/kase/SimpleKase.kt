@@ -14,5 +14,3 @@ class SimpleKase<C : SourceContainer<S>, S : Any>(private val container: C) : Ka
     override fun <V : Any> set(key: WritableKey<C, S, V>, value: V) = key.insert(container, value)
 
 }
-
-fun <C : SourceContainer<S>, S : Any> kaseOf(container: C): SimpleKase<C, S> = SimpleKase(container)
