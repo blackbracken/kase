@@ -1,4 +1,4 @@
-package black.bracken.kase
+package black.bracken.kase.container
 
 /**
  * A container for source.

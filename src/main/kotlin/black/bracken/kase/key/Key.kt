@@ -1,6 +1,6 @@
 package black.bracken.kase.key
 
-import black.bracken.kase.SourceContainer
+import black.bracken.kase.container.SourceContainer
 
 /**
  * A key to read data from [SourceContainer].
