@@ -9,10 +9,10 @@
 一つのデータに含まれる複数個のデータを一対多の関係にラップして, Keyを用いることで柔軟かつ容易に操作させることを目標としています.
 
 ## 使い方
-* `SourceContainer<S : Any>`は"複数個のデータを持つ{一つのデータを含むもの"に対応します.
-* `Kase<C : SourceContainer<S>, S: Any>`は"SourceContainer"を包含し, Key以外からはソースとなるデータを隠します.
-* `Key<in C : SourceContainer<S>, S : Any, out V : Any>`はKaseに用いることで, 目的する操作(get)を達成します.
-  * Keyを継承した`WritableKey< .. >`を用いることで, 書き込み(set)も可能になります.
+* `SourceContainer<S : Any>`は"複数個のデータを持つ一つのデータを含むもの"に対応します.
+* `Kase<C : SourceContainer<S>, S: Any>`は`SourceContainer`を包含し, `Key`以外からはソースとなるデータを隠します.
+* `Key<in C : SourceContainer<S>, S : Any, out V : Any>`は`Kase`に用いることで, 目的する操作(`get`)を達成します.
+  * `Key`を継承した`WritableKey< .. >`を用いることで, 書き込み(`set`)も可能になります.
 
 ### 例
 ```kotlin
