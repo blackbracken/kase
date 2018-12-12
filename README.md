@@ -54,7 +54,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'black.bracken.git:Kase:<VERSION>'
+    implementation 'com.github.blackbracken:Kase:<VERSION>'
 }
 ```
 
@@ -70,7 +70,7 @@ dependencies {
 
 <!-- add the dependency -->
 <dependency>
-    <groupId>black.bracken.git</groupId>
+    <groupId>com.github.blackbracken</groupId>
     <artifactId>Kase</artifactId>
     <version>VERSION</version>
 </dependency>
