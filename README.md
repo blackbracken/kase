@@ -21,11 +21,9 @@ data class Json(private var rawJson: String) {
     operator fun set(key: String, value: String): Unit = TODO("implemented")
 }
 
-private val A_KEY = SimpleKey<SourceContainer<Json>, Json, String> { container ->
-    container.source["A"] as? A ?: throw NoSuchElementException()
-}
+private val A_KEY = SimpleKey<SourceContainer<Json>, Json, String> { container -> container.source["A"] as? A }
 private val B_KEY = SimpleWritableKey<SourceContainer<Json>, Json, String>(
-    extractor = { container -> container.source["B"] as? B ?: throw NoSuchElementException() },
+    extractor = { container -> container.source["B"] as? B },
     inserter = { container, value -> container.source["B"] = value }
 )
 
