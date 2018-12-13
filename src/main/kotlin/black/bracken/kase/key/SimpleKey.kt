@@ -6,9 +6,9 @@ import black.bracken.kase.container.SourceContainer
  * @author BlackBracken
  */
 class SimpleKey<in C : SourceContainer<S>, S : Any, out V : Any>(
-    private val extractor: (C) -> V
+    private val extractor: (C) -> V?
 ) : Key<C, S, V> {
 
-    override fun extract(container: C): V = extractor(container)
+    override fun extract(container: C): V = extractor(container) ?: throw NoSuchElementException()
 
 }
