@@ -9,6 +9,6 @@ import black.bracken.kase.container.SourceContainer
  */
 interface Key<in C : SourceContainer<S>, S : Any, out V : Any> {
 
-    fun extract(container: C): V
+    fun extract(container: C): V?
 
 }
