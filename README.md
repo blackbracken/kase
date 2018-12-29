@@ -32,8 +32,8 @@ fun main() {
     val container = SimpleSourceContainer(json)
     val kase = SimpleKase(container)
 
-    val a = kase.getOrNull(A_KEY) ?: "Not found"
-    val b = kase.getOrPut(B_KEY) { "INSTEAD_B" }
+    val a = kase[A_KEY] ?: TODO("if not exists")
+    val b = kase.getOrPut(B_KEY) { TODO("new B") }
     
     kase[B_KEY] = "NEW B!"
     
